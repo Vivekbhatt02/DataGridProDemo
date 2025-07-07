@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     Dialog,
     DialogTitle,
@@ -16,6 +16,13 @@ export default function EnrolledParticipantsDialog({open, onClose, date}) {
         {id: 2, name: 'Manish', shift: 'Evening'},
         {id: 3, name: 'Karan', shift: 'Night'},
     ]);
+
+    useEffect(() => {
+        if (open) {
+            setRowSelectionModel({ type: 'include', ids: new Set() });
+        }
+    }, [open, date]);
+
 
     const [rowSelectionModel, setRowSelectionModel] = useState({
         type: 'include',
