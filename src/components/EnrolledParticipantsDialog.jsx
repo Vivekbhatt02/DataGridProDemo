@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import {DataGridPro} from '@mui/x-data-grid-pro';
 
-export default function ShiftPlanManagementDialog({open, onClose, date}) {
+export default function EnrolledParticipantsDialog({open, onClose, date}) {
     const [rows, setRows] = useState([
         {id: 1, name: 'Vivek', shift: 'Morning'},
         {id: 2, name: 'Manish', shift: 'Evening'},

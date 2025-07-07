@@ -3,11 +3,11 @@ import {Calendar, momentLocalizer, Views} from 'react-big-calendar'
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-import ShiftPlanManagementDialog from "./ShiftPlanManagementDialog.jsx";
+import EnrolledParticipantsDialog from "./EnrolledParticipantsDialog.jsx";
 
 const localizer = momentLocalizer(moment)
 
-export default function ShiftPlanGrid() {
+export default function MonthlySchedule() {
     const [open, setOpen] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
 
@@ -28,7 +28,7 @@ export default function ShiftPlanGrid() {
             selectable={true}
             style={{height: '100vh', width: '100vw'}}
         />
-        <ShiftPlanManagementDialog
+        <EnrolledParticipantsDialog
             open={open}
             onClose={() => setOpen(false)}
             date={selectedDate}

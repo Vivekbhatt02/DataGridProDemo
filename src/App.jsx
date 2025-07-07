@@ -1,8 +1,8 @@
-import ShiftPlanGrid from "./components/ShiftPlanGrid.jsx";
+import MonthlySchedule from "./components/MonthlySchedule.jsx";
 
 export default function App() {
 
   return (
-      <ShiftPlanGrid />
+      <MonthlySchedule />
   )
 }
